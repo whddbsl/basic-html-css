@@ -4,6 +4,12 @@
     color: inherit;
 }
 
+/* 가상 요소 선택자 */
+::selection {
+  background: #0f153f;
+  color: hotpink;
+}
+
 /* body 선택자 */
 body {
     font-family: "SUIT";
@@ -20,13 +26,37 @@ body {
     text-shadow: 4px 4px 3px #77f;
 }
 
+.align {
+    text-align: center;
+}
+
 ul.menu {
     margin: 0;
     padding-left: 0;
-    color : #f00;
+    color: green;
 }
 
 /* 아이디 선택자 */
 #demo {
-  border: red 5px solid;
+    border: red 5px solid;
+}
+
+/* 속성 선택자 */
+.menu a[href$=".html"] {
+    background-color: blue;
+}
+
+/* 선택자 목록 */
+.fancy,
+.menu {
+    font-size: 24px;
+}
+
+/* 가상 요소 선택자 */
+.align::before{
+    content: "이전 요소";
+}
+
+.align::after{
+    content: "다음 요소";
 }
